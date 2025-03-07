@@ -84,15 +84,14 @@ export const Socials = [
     {
         name: "Instagram",
         src: "/instagram.svg",
+        link:'https://www.instagram.com/rashi_quzzaman_sifat/'
     },
     {
         name: "Facebook",
         src: "/facebook.svg",
+        link: 'https://www.facebook.com/profile.php?id=100007954478797'
     },
-    {
-        name: "Discord",
-        src: "/discord.svg",
-    },
+    
 ];
 
 

@@ -8,16 +8,20 @@ const Projects = () => {
                 My Projects
             </h1>
             <div className='h-full w-full flex flex-col md:flex-row gap-10 px-10'>
-                <ProjectCard
+               <button className='cursor-pointer'>
+               <ProjectCard
                     src='/FigmaClone.png'
                     title='Figma Clone'
                     description='Figma Clone using Next.js 14, Tailwind CSS, Liveblocks,Fabric'
                 />
+               </button>
+                <a href='https://travel-nest-pib6.vercel.app/' target="_blank" rel="noopener noreferrer">
                 <ProjectCard
                     src='/TravelWebsite.png'
                     title='Travel Website'
                     description='Travel Website Using Next.js 14, Tailwind CSS, TypeScript'
                 />
+                </a>
                 <ProjectCard
                     src='/YoutubeClone.png'
                     title='Youtube Clone'

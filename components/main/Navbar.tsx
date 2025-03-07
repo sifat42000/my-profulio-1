@@ -1,58 +1,75 @@
-import { Socials } from '@/constants'
-import Image from 'next/image'
-import React from 'react'
+"use client";
+
+import { Socials } from '@/constants';
+import Image from 'next/image';
+import React, { useState } from 'react';
 
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <div className='w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10'>
-            <div className='w-full h-full flex flex-row items-center justify-between m-auto px-[10px]'>
-                <a href='#about-me'
-                    className='h-auto w-auto flex flex-row items-center'
-                >
+        <nav className='w-full fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-5 md:px-10'>
+            <div className='w-full h-[65px] flex items-center justify-between'>
+                
+                {/* Logo */}
+                <a href='#about-me' className='flex items-center'>
                     <Image
-                        src="/NavLogo.png"
+                        src='/NavLogo.png'
                         alt='logo'
                         width={70}
                         height={70}
                         className='cursor-pointer hover:animate-slowspin'
-
                     />
-                    <span className='font-bold ml-[8px] hidden md:block text-gray-300'>
-                        constGenius
-                    </span>
                 </a>
 
-                <div className='w-[500px] h-full flex flex-row items-center justify-between md:mr-20'>
-                    <div className='flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200'>
-                        <a href='#about-me' className='cursor-pointer'>
-                            About me
-                        </a>
-                        <a href='#skills' className='cursor-pointer'>
-                            Skills
-                        </a>
-                        <a href='#projects' className='cursor-pointer'>
-                            Projects
-                        </a>
-                    </div>
-                </div>
+                {/* Menu Button (Mobile) */}
+                <button
+                    className='md:hidden text-gray-200 focus:outline-none z-[60]'
+                    onClick={() => setIsOpen(!isOpen)}
+                >
+                    {isOpen ? '✕' : '☰'}
+                </button>
 
-                <div className='flex flex-row gap-5'>
-                    {Socials.map((social) => (
-                        <Image
-                            src={social.src}
-                            alt={social.name}
-                            key={social.name}
-                            width={24}
-                            height={24}
-                        />
+                {/* Overlay with Blur Background */}
+                {isOpen && (
+                    <div className='fixed inset-0 bg-[#030014]/30 backdrop-blur-xl z-40 transition-all duration-300'></div>
+                )}
+
+                {/* Navigation Links */}
+                <div
+                    className={`absolute md:relative top-[65px] md:top-0 left-0 w-full md:w-auto bg-[#0300144f] md:bg-transparent flex flex-col md:flex-row items-center gap-5 p-5 md:p-0 transition-all duration-300 ${
+                        isOpen ? 'block z-50' : 'hidden md:flex'
+                    }`}
+                >
+                    {['About me', 'Skills', 'Projects', 'Contact'].map((item) => (
+                        <a
+                            key={item}
+                            href={`#${item.toLowerCase().replace(' ', '-')}`}
+                            className='text-gray-200 hover:text-[#7042f8] transition-colors duration-300'
+                            onClick={() => setIsOpen(false)}
+                        >
+                            {item}
+                        </a>
                     ))}
                 </div>
 
-
+                {/* Social Links */}
+                <div className='hidden md:flex items-center gap-5'>
+                    {Socials.map((social) => (
+                        <a key={social.name} href={social.link} target='_blank' rel='noopener noreferrer'>
+                            <Image
+                                src={social.src}
+                                alt={social.name}
+                                width={24}
+                                height={24}
+                                className='hover:scale-110 transition-transform duration-300'
+                            />
+                        </a>
+                    ))}
+                </div>
             </div>
+        </nav>
+    );
+};
 
-        </div>
-    )
-}
-
-export default Navbar
+export default Navbar;

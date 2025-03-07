@@ -23,7 +23,7 @@ export default function RootLayout({
         <StarCanvas />
         <Navbar />
         {children}
-        <Footer />
+        
       </body>
     </html>
   );

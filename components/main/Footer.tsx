@@ -30,10 +30,10 @@ const Footer = () => {
                         <div className='font-bold text-[16px]'>
                             Social Media
                         </div>
-                        <p className='flex flex-row items-center my-[15px] cursor-pointer'>
+                        <a href='https://www.instagram.com/rashi_quzzaman_sifat/' className='flex flex-row items-center my-[15px] cursor-pointer'>
                             <FaInstagram />
                             <span className='text-[15px] ml-[6px]'>Instagram</span>
-                        </p>
+                        </a>
                         <p className='flex flex-row items-center my-[15px] cursor-pointer'>
                             <FaTwitter />
                             <span className='text-[15px] ml-[6px]'>Twitter</span>

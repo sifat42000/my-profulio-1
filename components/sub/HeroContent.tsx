@@ -33,7 +33,7 @@ const HeroContent = () => {
                     className='flex flex-col gap-4 mt-6 text-4xl md:text-6xl font-bold text-white w-full'
                 >
                     <span>
-                        Hello, It's Me
+                        Hello, It is Me
                         <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500'>
                             {" "}Rashiquzzaman{" "}
                         </span>
@@ -46,7 +46,7 @@ const HeroContent = () => {
                     variants={slideInFromLeft(0.8)}
                     className='text-base md:text-lg text-gray-400 my-5 max-w-[600px]'
                 >
-                    I&apos;m a MERN stack developer. Check out my projects and skills.
+                    I am a MERN stack developer. Check out my projects and skills.
                 </motion.p>
 
                 {/* Learn More Button */}

@@ -8,7 +8,7 @@ import pic1 from '../../public/479189210_3687717974836649_7530844392409098475_n.
 
 const Contact = () => {
   return (
-    <section className="container mb-28 mx-auto flex flex-col md:flex-row items-center justify-between p-8 rounded-2xl shadow-lg" id='Contact'>
+    <section className="container mb-28 gap-3 mx-auto mt-4 md:mt-0 flex-none md:flex flex-col md:flex-row items-center justify-between p-8 rounded-2xl shadow-lg" id='Contact'>
       {/* বাম পাশ: যোগাযোগের তথ্য */}
       <div className="md:w-1/2 space-y-6">
         <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-6">
@@ -19,7 +19,7 @@ const Contact = () => {
         <div className="space-y-4">
           <p className="text-lg">
             📧 Email:
-            <a href="mailto:rashiquzzamansifat@gmail.com" className="text-blue-600 hover:underline cursor-pointer">
+            <a href="mailto:rashiquzzamansifat@gmail.com" className="text-blue-600 -top-8 md:-top-0 hover:underline cursor-pointer">
               rashiquzzamansifat@gmail.com
             </a>
           </p>

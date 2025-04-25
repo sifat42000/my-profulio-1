@@ -15,6 +15,7 @@
     //     name : 'javaSCript',
     //     author : 'Sifat',
     //     price : 200
+    //     price : 200
     // }
 
     // const result = getBook(myBook,'price')

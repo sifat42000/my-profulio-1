@@ -23,6 +23,7 @@
 
 
     // Maped types
+    //Maped types
 
     type TAdress = {
         houseNum : number,

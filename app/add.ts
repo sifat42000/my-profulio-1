@@ -23,7 +23,8 @@
 
 
     // Maped types
-    //Maped types
+    //Mother fucker Maped types
+    
 
     type TAdress = {
         houseNum : number,

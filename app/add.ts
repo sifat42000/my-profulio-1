@@ -24,6 +24,7 @@
 
     // Maped types
     //Mother fucker Maped types
+    // father mother
     
 
     type TAdress = {
